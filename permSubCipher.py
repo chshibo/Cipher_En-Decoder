@@ -10,7 +10,29 @@ def main():
         alpha_count[key] = alpha_count[key]/len(cipher_text)
     for key,value in sorted(alpha_count.items(), key=operator.itemgetter(1),reverse=True):
         print(str(key)+" : "+str(value))
-    substitute = {'c':'t','y':'l'}
+    substitute = {'c':'e',
+                  'y':'r',
+                  'g':'a',
+                  's':'o',
+                  'k':'s',
+                  'i':'d',
+                  'u':'t',
+                  'e':'i',
+                  'o':'n',
+                  'z':'h',
+                  'n':'l',
+                  'f':'w',
+                  'd':'b',
+                  'x':'p',
+                  'l':'y',
+                  'j':'c',
+                  'w':'g',
+                  'h':'f',
+                  'p':'u',
+                  'q':'j',
+                  'a':'v',
+                  'm':'m'
+            }
     plain_text = ''
     for i in range(0,len(cipher_text)):
         if cipher_text[i] in substitute:
